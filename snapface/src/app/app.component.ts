@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
         location: 'Paris'
       },
       {
-        title: 'Sousou',
+        title: 'Sousou the big',
         description: 'Moi',
         imageUrl: 'https://cdn.pixabay.com/photo/2019/02/07/23/12/teddy-bear-3982406_1280.jpg',
         createdDate: new Date(),
@@ -47,14 +47,14 @@ export class AppComponent implements OnInit {
         description: 'Moi',
         imageUrl: 'https://cdn.pixabay.com/photo/2019/02/07/23/12/teddy-bear-3982406_1280.jpg',
         createdDate: new Date(),
-        snaps: 0
+        snaps: 50
       },
       {
         title: 'Iceland',
         description: 'Next destination',
         imageUrl: 'https://cdn.pixabay.com/photo/2017/07/15/19/49/iceland-2507534_1280.jpg',
         createdDate: new Date(),
-        snaps: 10,
+        snaps: 1000,
         location: 'Leykjavik'
       }
     ];
