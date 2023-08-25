@@ -63,3 +63,31 @@
 - as a result, the constructor injects the unique instance of the service registered on the root to the component instance
 - now we are initialising the faceSnaps local property with the value of the service's faceSnaps value!
 
+## Literal types
+`snapFaceSnapById(faceSnapId: number, snapType: 'snap' | 'unsnap'): void`
+- literal types force/limit to use literal strings among the chosen
+- numeric literal types also exist
+- we can combine literal types with non-literal types
+[TypeScript literal types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#literal-types)
+
+## Single Page Application(SPA)
+### Routing
+- a routing module enables interpreting URL changes and displaying the right component for every virtual page
+- create a file under /app : `app-routing.module.ts`
+- constant array of Routes will connect different URLs to the corresponding components.
+- a route is an object of type `{ path: '[URL]', component: [compoment name] }`
+- register routes into the root of the application using `RouterModule.forRoot()` function
+- and then export the configured route module 
+- and to register in the app, add the route module in the imports array of `app.module.ts` (which is the principal module of the app)
+- in `app.component.html`, rather than static calling of `<app-face-snap-list>` tags, call `<router-outlet>` tags
+- By the way if we type the address `localhost:4200/facesnaps` onto the browser bar, the application will be reloaded (new request send to the server)
+
+### Changing from a route to another
+1. creating links with special attributes in template
+	- Angular directive `routerLink`
+	- `routerLinkActive` class for active routers
+2. using Angular's Route tool in TypeScript side (programmatic)
+	- create a button and add `(click)=[method]` in it
+	- inject a router into the landing pade component and use its `navigateByUrl()` function
+
+### Active routes with ActivatedRoute
