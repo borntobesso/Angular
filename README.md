@@ -90,4 +90,7 @@
 	- create a button and add `(click)=[method]` in it
 	- inject a router into the landing pade component and use its `navigateByUrl()` function
 
-### Active routes with ActivatedRoute
+### Activate routes with ActivatedRoute
+- we can create a route with a dynamic parameter (ex. id)
+- to get the information of the activated route, we need to inject ActivatedRoute in the component
+- then we extract the id parameter of the route, and use the service to get the corresponding component. `+this.route.snapshot.params['id'];` (typecasting from string to number, as all the parameters from route is strign type)
